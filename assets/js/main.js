@@ -1,251 +1,275 @@
-$(function() {
-    
-    "use strict";
-    
-    //===== Prealoder
-    
-    $(window).on('load', function(event) {
-        $('.preloader').delay(500).fadeOut(500);
-    });
-    
-    
-    //===== Sticky
-    
-    // grab an element
-    var myElement = document.querySelector(".headroom");
-    // construct an instance of Headroom, passing the element
-    var headroom  = new Headroom(myElement);
-    // initialise
-    headroom.init();
-    
-    
-    $('#nav').onePageNav({
-        currentClass: 'active',
-        changeHash: true,
-        scrollSpeed: 800,
-        scrollThreshold: 0.5,
-        filter: '',
-        easing: 'swing',
-        begin: function() {
-            //I get fired when the animation is starting
-        },
-        end: function() {
-            //I get fired when the animation is ending
-        },
-        scrollChange: function($currentListItem) {
-            //I get fired when you enter a section and I pass the list item of the section
-        }
-    });
-    
-    
-    $.scrollIt({
-        scrollTime: 800, 
-    });
-    
-        
-    //===== close navbar-collapse when a  clicked
-    
-    $(".navbar-nav a").on('click', function () {
-        $(".navbar-collapse").removeClass("show");
-    });
-    
-    
-    //===== Mobile Menu
-    
-    $(".navbar-toggler").on('click', function(){
-        $(this).toggleClass("active");
-    });
-    
-    $(".navbar-nav a").on('click', function() {
-        $(".navbar-toggler").removeClass('active');
-    });
-    
-    var subMenu = $(".sub-menu-bar .navbar-nav .sub-menu");
-    
-    if(subMenu.length) {
-        subMenu.parent('li').children('a').append(function () {
-            return '<button class="sub-nav-toggler"> <span></span> </button>';
-        });
-        
-        var subMenuToggler = $(".sub-menu-bar .navbar-nav .sub-nav-toggler");
-        
-        subMenuToggler.on('click', function() {
-            $(this).parent().parent().children(".sub-menu").slideToggle();
-            return false
-        });
-        
-    }
-    
-    
-    //===== Counter Up
-    
-    $('.counter').counterUp({
-        delay: 10,
-        time: 3000
-    });
-    
-    
-    //===== Isotope Project 1
-    
-    $('.container').imagesLoaded(function () {
-        var $grid = $('.grid').isotope({
-        // options
-            transitionDuration: '1s',
-            itemSelector: '.grid-item',
-            percentPosition: true,
-            masonry: {
-                
-            }
-            
-        });
-        
-        // filter items on button click
-        $('.project-menu ul').on( 'click', 'li', function() {
-          var filterValue = $(this).attr('data-filter');
-          $grid.isotope({ filter: filterValue });
-        });
-        
-        //for menu active class
-        $('.project-menu ul li').on('click', function (event) {
-            $(this).siblings('.active').removeClass('active');
-            $(this).addClass('active');
-            event.preventDefault();
-        });
-    });
-    
-    
-    //===== Back to top
-    
-    // Show or hide the sticky footer button
-    $(window).on('scroll', function(event) {
-        if($(this).scrollTop() > 600){
-            $('.back-to-top').fadeIn(200)
-        } else{
-            $('.back-to-top').fadeOut(200)
-        }
-    });
-    
-    
-    //Animate the scroll to yop
-    $('.back-to-top').on('click', function(event) {
-        event.preventDefault();
-        
-        $('html, body').animate({
-            scrollTop: 0,
-        }, 1500);
-    });
-    
-    
-    //=====  services progress
+/*--------------------------
+    Project Name: Mintech
+    Version: 1.0
+    Author: 7oorof
+    Devloped by: Ahmed Abdallah (a.abdallah999@gmail.com)
+    Relase Date: October 2020
+---------------------------*/
+/*---------------------------
+      Table of Contents
+    --------------------
+    01- Pre Loading
+    02- Mobile Menu
+    03- Sticky Navbar
+    04- Scroll Top Button
+    05- Close Topbar
+    06- Set Background-img to section
+    07- Add active class to accordions
+    08- Contact Form validation
+    09- Slick Carousel
+    10- Popup Video
+    11- CounterUp
+    12- NiceSelect Plugin
+    13- portfolio Filtering and Sorting
 
-    if($('.our-services-progress').length){
-        $('.our-services-progress').appear(function(){
-            Circles.create({
-                id: 'circles-1',
-                radius: 50,
-                value: 95,
-                maxValue: 100,
-                width: 3,
-                text: function(value){return value + '%';},
-                colors: ['#f0f0f0', '#f14836'],
-                duration: 1000,
-                wrpClass: 'circles-wrp',
-                textClass: 'circles-text',
-                styleWrapper: true,
-                styleText: true,
-            });
-        });
+ ----------------------------*/
+
+$(function() {
+
+  "use strict";
+
+  // Global variables
+  var $win = $(window);
+
+  /*==========  Pre Loading   ==========*/
+  $win.on('load', function() {
+    $(".preloader").fadeOut(5000);
+    $(".preloader").remove();
+  });
+
+  /*==========   Mobile Menu   ==========*/
+  var $navToggler = $('.navbar-toggler');
+  $navToggler.on('click', function() {
+    $(this).toggleClass('actived');
+  })
+  $navToggler.on('click', function() {
+    $('.navbar-collapse').toggleClass('menu-opened');
+  })
+
+  /*==========   Sticky Navbar   ==========*/
+  $win.on('scroll', function() {
+    if ($win.width() >= 992) {
+      var $stickyNavbar = $('.sticky-navbar'),
+        $secondaryNavbar = $('.secondary-nav');
+      if ($win.scrollTop() > 50) {
+        $stickyNavbar.addClass('is-sticky');
+      } else {
+        $stickyNavbar.removeClass('is-sticky');
+      }
+      if ($secondaryNavbar.length) {
+        if ($win.scrollTop() > $secondaryNavbar.offset().top - 100) {
+          $secondaryNavbar.addClass('secondary-nav-sticky');
+        } else {
+          $secondaryNavbar.removeClass('secondary-nav-sticky');
+        }
+      }
     }
-    
-    if($('.our-services-progress').length){
-        $('.our-services-progress').appear(function(){
-            Circles.create({
-                id: 'circles-2',
-                radius: 50,
-                value: 85,
-                maxValue: 100,
-                width: 3,
-                text: function(value){return value + '%';},
-                colors: ['#f0f0f0', '#f14836'],
-                duration: 1000,
-                wrpClass: 'circles-wrp',
-                textClass: 'circles-text',
-                styleWrapper: true,
-                styleText: true,
-            });
-        });
-    }
-    
-    if($('.our-services-progress').length){
-        $('.our-services-progress').appear(function(){
-            Circles.create({
-                id: 'circles-3',
-                radius: 50,
-                value: 75,
-                maxValue: 100,
-                width: 3,
-                text: function(value){return value + '%';},
-                colors: ['#f0f0f0', '#f14836'],
-                duration: 1000,
-                wrpClass: 'circles-wrp',
-                textClass: 'circles-text',
-                styleWrapper: true,
-                styleText: true,
-            });
-        });
-    }
-    
-    if($('.our-services-progress').length){
-        $('.our-services-progress').appear(function(){
-            Circles.create({
-                id: 'circles-4',
-                radius: 50,
-                value: 70,
-                maxValue: 100,
-                width: 3,
-                text: function(value){return value + '%';},
-                colors: ['#f0f0f0', '#f14836'],
-                duration: 1000,
-                wrpClass: 'circles-wrp',
-                textClass: 'circles-text',
-                styleWrapper: true,
-                styleText: true,
-            });
-        });
-    }
-   
-    
-    //===== slick Testimonial
-    
-    $('.testimonial-active').slick({
-        dots: false,
-        arrows: true,
-        prevArrow: '<span class="prev"><i class="lni-arrow-left"></i></span>',
-        nextArrow: '<span class="next"><i class="lni-arrow-right"></i></span>',
-        infinite: true,
-        autoplay: true,
-        autoplaySpeed: 5000,
-        speed: 800,
-        slidesToShow: 1,
-    });
-    
-    
-    //===== Magnific Popup
-    
-    $('.image-popup').magnificPopup({
-      type: 'image',
-      gallery:{
-        enabled:true
+  });
+  // Scroll To Section when Clicking on The Link
+  $('.secondary-nav-internal-navigation .nav__link').on("click", function(e) {
+    e.preventDefault();
+    $('html, body').animate({
+      scrollTop: $('#' + $(this).data('scroll')).offset().top - 140
+    }, 1000);
+  });
+
+  // Add  active class when The Scroll Reaching the Section
+  $(window).on("scroll", function() {
+    $('section').each(function() {
+      if ($(window).scrollTop() > $(this).offset().top - 141) {
+        var sectionID = $(this).attr('id');
+        $('.secondary-nav-internal-navigation .nav__link').removeClass('active');
+        $('.secondary-nav-internal-navigation .nav__link[data-scroll="' + sectionID + '"]').addClass('active');
       }
     });
-    
-    
-    
-    
-    //=====  WOW active
-    
-    new WOW().init();
-    
-    
-    
+  });
+
+  /*==========   Scroll Top Button   ==========*/
+  var $scrollTopBtn = $('#scrollTopBtn');
+  // Show Scroll Top Button
+  $win.on('scroll', function() {
+    if ($(this).scrollTop() > 700) {
+      $scrollTopBtn.addClass('actived');
+    } else {
+      $scrollTopBtn.removeClass('actived');
+    }
+  });
+  // Animate Body after Clicking on Scroll Top Button
+  $scrollTopBtn.on('click', function() {
+    $('html, body').animate({
+      scrollTop: 0
+    }, 500);
+  });
+
+  /*==========   Close Topbar   ==========*/
+  $('.topbar__close').on("click", function(e) {
+    e.preventDefault();
+    $(this).closest('.topbar').fadeOut()
+  });
+
+  /*==========   Set Background-img to section   ==========*/
+  $('.bg-img').each(function() {
+    var imgSrc = $(this).children('img').attr('src');
+    $(this).parent().css({
+      'background-image': 'url(' + imgSrc + ')',
+      'background-size': 'cover',
+      'background-position': 'center',
+    });
+    $(this).parent().addClass('bg-img');
+    if ($(this).hasClass('background-size-auto')) {
+      $(this).parent().addClass('background-size-auto');
+    }
+    $(this).remove();
+  });
+
+  /*==========   Add active class to accordions   ==========*/
+  $('.accordion-item__header').on('click', function() {
+    $(this).parent('.accordion-item').toggleClass('opened');
+    $(this).parent('.accordion-item').siblings().removeClass('opened');
+  })
+  $('.accordion-item__title').on('click', function(e) {
+    e.preventDefault()
+  });
+
+  /*==========  Open and Close Popup   ==========*/
+  // open Popup
+  function openPopup(popupTriggerBtn, popup, addedClass, removedClass) {
+    $(popupTriggerBtn).on('click', function(e) {
+      e.preventDefault();
+      $(popup).toggleClass(addedClass, removedClass).removeClass(removedClass);
+    });
+  }
+  // Close Popup
+  function closePopup(closeBtn, popup, addedClass, removedClass) {
+    $(closeBtn).on('click', function() {
+      $(popup).removeClass(addedClass).addClass(removedClass);
+    });
+  }
+  // close popup when clicking on an other place on the Document
+  function closePopupFromOutside(popup, stopPropogationElement, popupTriggerBtn, removedClass, addedClass) {
+    $(document).on('mouseup', function(e) {
+      if (!$(stopPropogationElement).is(e.target) && !$(popupTriggerBtn).is(e.target) && $(stopPropogationElement).has(e.target).length === 0 && $(popup).has(e.target).length === 0) {
+        $(popup).removeClass(removedClass).addClass(addedClass);
+      }
+    });
+  }
+  openPopup('.action__btn-search', '.search-popup', 'active', 'inActive') // Open sidenav popup
+  closePopup('.search-popup__close', '.search-popup', 'active', 'inActive') // Close sidenav popup
+  openPopup('.action__btn-burgerMenu', '.burger-menu', 'active', 'inActive') // Open sidenav popup
+  closePopup('.burger-menu__close', '.burger-menu', 'active', 'inActive') // Close sidenav popup
+  openPopup('.action__btn-cart', '.cart-popup', 'active', 'inActive') // Open Search popup
+  closePopupFromOutside('.burger-menu', '.burger-menu__content', '.action__btn-burgerMenu', 'active', 'inActive'); // close popup when clicking on an other place on the Document
+  openPopup('.action__btn-menuPopup', '.menu-popup', 'active', 'inActive') // Open menu-popup
+  closePopup('.menu-popup__close', '.menu-popup', 'active', 'inActive') // Close menu-popup
+
+  openPopup('.open-login-popup', '#login-popup', 'active', 'inActive') // Open sidenav popup
+  closePopupFromOutside('#login-popup', '.login-popup-wrapper', '.open-login-popup', 'active', 'inActive'); // close popup when clicking on an other place on the Document
+
+  openPopup('.open-register-popup', '#register-popup', 'active', 'inActive') // Open sidenav popup
+  closePopupFromOutside('#register-popup', '.login-popup-wrapper', '.open-register-popup', 'active', 'inActive'); // close popup when clicking on an other place on the Document
+  // Open Login Popup
+  $('#go-login').on('click', function() {
+    $('#register-popup').removeClass('active').addClass('inActive');
+    $('#login-popup').removeClass('inActive').addClass('active');
+  });
+  // Open Register Popup
+  $('#go-register').on('click', function() {
+    $('#login-popup').removeClass('active').addClass('inActive');
+    $('#register-popup').removeClass('inActive').addClass('active');
+  });
+
+  /*==========  Contact Form validation  ==========*/
+  var contactForm = $("#contactForm"),
+    contactResult = $('.contact-result');
+  contactForm.validate({
+    debug: false,
+    submitHandler: function(contactForm) {
+      $(contactResult, contactForm).html('Please Wait...');
+      $.ajax({
+        type: "POST",
+        url: "assets/php/contact.php",
+        data: $(contactForm).serialize(),
+        timeout: 20000,
+        success: function(msg) {
+          $(contactResult, contactForm).html('<div class="alert alert-success" role="alert"><strong>Thank you. We will contact you shortly.</strong></div>').delay(3000).fadeOut(2000);
+        },
+        error: $('.thanks').show()
+      });
+      return false;
+    }
+  });
+
+  /*==========   Slick Carousel ==========*/
+  $('.slick-carousel').slick();
+
+  $('.slider-with-navs').slick({
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    arrows: false,
+    fade: false,
+    dots: false,
+    asNavFor: '.slider-nav'
+  });
+
+  $('.slider-nav').slick({
+    slidesToShow: 3,
+    slidesToScroll: 1,
+    asNavFor: '.slider-with-navs',
+    dots: false,
+    arrows: true,
+    centerMode: true,
+    focusOnSelect: true,
+    centerPadding: '10px'
+  });
+
+  /*==========  Popup Video  ==========*/
+  $('.popup-video').magnificPopup({
+    mainClass: 'mfp-fade',
+    removalDelay: 0,
+    preloader: false,
+    fixedContentPos: false,
+    type: 'iframe',
+    iframe: {
+      markup: '<div class="mfp-iframe-scaler">' +
+        '<div class="mfp-close"></div>' +
+        '<iframe class="mfp-iframe" frameborder="0" allowfullscreen></iframe>' +
+        '</div>',
+      patterns: {
+        youtube: {
+          index: 'youtube.com/',
+          id: 'v=',
+          src: '//www.youtube.com/embed/%id%?autoplay=1'
+        }
+      },
+      srcAction: 'iframe_src',
+    }
+  });
+  $('.popup-gallery-item').magnificPopup({
+    type: 'image',
+    tLoading: 'Loading image #%curr%...',
+    mainClass: 'mfp-img-mobile',
+    gallery: {
+      enabled: true,
+      navigateByImgClick: true,
+      preload: [0, 1]
+    },
+    image: {
+      tError: '<a href="%url%">The image #%curr%</a> could not be loaded.'
+    }
+  });
+
+  /*==========   counterUp  ==========*/
+  $(".counter").counterUp({
+    delay: 10,
+    time: 4000
+  });
+
+  /*==========  NiceSelect Plugin  ==========*/
+  $('select').niceSelect();
+
+  /*==========   portfolio Filtering and Sorting  ==========*/
+  $("#filtered-items-wrap").mixItUp();
+  $(".portfolio-filter li a").on("click", function(e) {
+    e.preventDefault();
+  });
 });

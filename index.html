@@ -1,698 +1,425 @@
-<!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
 
 <head>
-    <meta charset="utf-8">
-    
-    <!--====== Title ======-->
-    <title>TRACEBERRY</title>
-    
-    <meta name="description" content="">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta name="description" content="Promotion Engine">
+  <link href="assets/images/favicon/favicon.png" rel="icon">
+  <title>TRACEBERRY</title>
 
-    <!--====== Favicon Icon ======-->
-    <link rel="shortcut icon" href="assets/images/favicon.png" type="image/png">
-        
-    <!--====== Slick CSS ======-->
-    <link rel="stylesheet" href="assets/css/slick.css">
-        
-    <!--====== Font Awesome CSS ======-->
-    <link rel="stylesheet" href="assets/css/font-awesome.min.css">
-        
-    <!--====== Line Icons CSS ======-->
-    <link rel="stylesheet" href="assets/css/LineIcons.css">
-        
-    <!--====== Animate CSS ======-->
-    <link rel="stylesheet" href="assets/css/animate.css">
-        
-    <!--====== Magnific Popup CSS ======-->
-    <link rel="stylesheet" href="assets/css/magnific-popup.css">
-        
-    <!--====== Bootstrap CSS ======-->
-    <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-    
-    <!--====== Default CSS ======-->
-    <link rel="stylesheet" href="assets/css/default.css">
-    
-    <!--====== Style CSS ======-->
-    <link rel="stylesheet" href="assets/css/style.css">
-    
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Public+Sans:wght@400;700;800;900&family=Roboto:wght@400;700&display=swap">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.1/css/all.css">
+  <link rel="stylesheet" href="assets/css/libraries.css">
+  <link rel="stylesheet" href="assets/css/style.css">
 </head>
 
 <body>
-    <!--[if IE]>
-    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-  <![endif]-->
-   
-   
-    <!--====== PRELOADER PART START ======-->
-
+  <div class="wrapper">
     <div class="preloader">
-        <div class="loader">
-            <div class="ytp-spinner">
-                <div class="ytp-spinner-container">
-                    <div class="ytp-spinner-rotator">
-                        <div class="ytp-spinner-left">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                        <div class="ytp-spinner-right">
-                            <div class="ytp-spinner-circle"></div>
-                        </div>
-                    </div>
-                </div>
+      <div class="loading">
+        <span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span>
+      </div>
+    </div><!-- /.preloader -->
+
+    <!-- =========================
+        Header
+    =========================== -->
+    <header class="header header-transparent">
+      <nav class="navbar navbar-expand-lg sticky-navbar">
+        <div class="container">
+          <a class="navbar-brand" href="index.html">
+            <img src="assets/images/logo/logo-light.png" class="logo-light" alt="logo">
+            <img src="assets/images/logo/logo-dark.png" class="logo-dark" alt="logo">
+          </a>
+          <button class="navbar-toggler" type="button">
+            <span class="menu-lines"><span></span></span>
+          </button>
+          <div class="collapse navbar-collapse" id="mainNavigation">
+            <ul class="navbar-nav mr-auto ml-auto">
+              <li class="nav__item">
+                <a href="index.html" class="nav__item-link active">Home</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="about-us.html" class="nav__item-link">About</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item  has-dropdown">
+                <a href="#" data-toggle="dropdown" class="dropdown-toggle nav__item-link">Solutions</a>
+                <ul class="dropdown-menu">
+                  <li class="nav__item">
+                    <a href="api.html" class="nav__item-link">Promo Engine API</a>
+                  </li> <!-- /.nav-item -->
+                  <li class="nav__item">
+                    <a href="link.html" class="nav__item-link">Promo Engine Link</a>
+                  </li><!-- /.nav-item -->
+                </ul><!-- /.dropdown-menu -->
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="pricing.html" class="nav__item-link">Pricing & Plans</a>
+              </li><!-- /.nav-item -->
+              <li class="nav__item">
+                <a href="contact-us.html" class="nav__item-link">Contact</a>
+              </li><!-- /.nav-item -->
+            </ul><!-- /.navbar-nav -->
+          </div><!-- /.navbar-collapse -->
+          <ul class="navbar-actions list-unstyled mb-0 d-flex align-items-center">
+            <li class="nav__item">
+              <a href="https://platform.traceberry.com/" target="_blank" class="nav__item-link">Login / Register</a>
+            </li><!-- /.nav-item -->
+            <li class="d-none d-xl-block">
+              <a href="#request" class="btn btn__primary btn__primary-style2 btn_ action__btn-contact">Request A Free Demo</a>
+            </li>
+          </ul><!-- /.navbar-actions -->
+        </div><!-- /.container -->
+      </nav><!-- /.navabr -->
+    </header><!-- /.Header -->
+
+    <!-- ============================
+        Slider
+    ============================== -->
+    <section class="slider">
+      <div class="slick-carousel carousel-arrows-light carousel-dots-light m-slides-0" data-slick='{"slidesToShow": 1, "arrows": true, "dots": true, "speed": 700,"fade": true,"cssEase": "linear"}'>
+        <div class="slide-item align-v-h bg-overlay">
+          <div class="bg-img"><img src="assets/images/sliders/1.jpg" alt="slide img"></div>
+          <div class="container">
+            <div class="row">
+              <div class="col-sm-12 col-md-12 col-lg-12 col-xl-7">
+                <div class="slide-item__content">
+                  <h2 class="slide-item__title">Cloud-Based<br> Promotion Engine</h2>
+                  <p class="slide-item__desc">Run promotions that perform, without wasting time and money on development and marketing.
+
+                  </p>
+                  <a href="#request" class="btn btn__primary btn__primary-style2 btn__hi mr-30">Request A Free Demo</a>
+                </div><!-- /.slide-content -->
+              </div><!-- /.col-xl-7 -->
+            </div><!-- /.row -->
+          </div><!-- /.container -->
+        </div><!-- /.slide-item -->
+      </div><!-- /.carousel -->
+    </section><!-- /.slider -->
+
+    <!-- ========================
+      About Layout 5
+    =========================== -->
+    <section class="about-layout5 pt-130 pb-0">
+      <div class="container">
+        <div class="row heading-layout2">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <h3 class="heading__title mb-30">Traceberry SaaS platform comes with powerfull features to fit all your business needs from running <span class="underlined-text">campaigns and promotions, and analyzing</span> your user's activities in
+              real time.
+            </h3>
+          </div><!-- /.col-xl-5 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-5 offset-xl-1">
+            <div class="about__Text">
+              <p>Our mission is to enable all retailers to digitize their customer experience. The platform’s core value is to level the playing field with the emerging e-commerce disruption currently happening by empowering all stakeholders in the
+                retail ecosystem with a digitized, value-based platform. We are focused on giving our clients a cutting edge platform that brings customers and retailers together and giving both value and benefits. In addition, providing a unique
+                shopping experience.
+
+              </p>
             </div>
-        </div>
-    </div>
+          </div><!-- /.col-xl-5 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.About Layout 5 -->
 
-    <!--====== PRELOADER PART ENDS ======-->
-    
-    <!--====== HEADER PART START ======-->
-    
-    <header class="header-area">
-        <div class="navbar-area headroom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12">
-                        <nav class="navbar navbar-expand-lg">
-                            <a class="navbar-brand" href="index.html">
-                                <img src="assets/images/logo.png" alt="Logo">
-                            </a>
-                            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                                <span class="toggler-icon"></span>
-                            </button>
-
-                            <div class="collapse navbar-collapse sub-menu-bar" id="navbarSupportedContent">
-                                <ul id="nav" class="navbar-nav m-auto">
-                                    <li class="nav-item active">
-                                        <a href="#home">Home</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#about">About </a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#services">Features</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#pricing">Pricing</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#api">API</a>
-                                    </li>
-                                    <li class="nav-item">
-                                        <a href="#contact">Contact</a>
-                                    </li>
-                                </ul>
-                            </div> <!-- navbar collapse -->
-                            
-                            <div class="navbar-btn d-none d-sm-inline-block">
-                                <a class="main-btn"  href="mailto:info@traceberry.com">Get in Touch</a>
-                            </div>
-                        </nav> <!-- navbar -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-        </div> <!-- navbar area -->
-        
-        <div id="home" class="header-hero bg_cover d-lg-flex align-items-center" style="background-image: url(assets/images/header-hero.png)">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-7">
-                        <div class="header-hero-content">
-                            <h1 class="hero-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s"><b>Cloud Based</b><span> Promotions Engine</span> for every <b>Platform.</b></h1>
-                            <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.5s">Run promotions that perform, without wasting time and money on development and marketing.
+    <!-- ========================
+        Services Layout 2
+    =========================== -->
+    <section class="services-layout3 pt-40 pb-100">
+      <div class="container">
+        <div class="row">
+          <!-- service item #1 -->
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="service-item">
+              <div class="service-item__content">
+                <div class="service-item__icon">
+                  <i class="icon-server"></i>
+                </div><!-- /.service-item__icon -->
+                <h4 class="service-item__title">Geo Promotions</h4>
+                <p class="service-item__desc">Reach out to your customer in the righ time, right location. Target user based on location and reach your customer anywhere there are. you can create a geofencing for your promotions or keep it open to
+                  everyone.</p>
+              </div><!-- /.service-content -->
+              <div class="service-item__overlay bg-overlay bg-overlay-primary">
+                <div class="bg-img"><img src="assets/images/services/1.jpg" alt="background"></div>
+              </div><!-- /.service-item__overlay -->
+            </div><!-- /.service-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- service item #2 -->
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="service-item">
+              <div class="service-item__content">
+                <div class="service-item__icon">
+                  <i class="icon-cloud"></i>
+                </div><!-- /.service-item__icon -->
+                <h4 class="service-item__title">Smart Analytics</h4>
+                <p class="service-item__desc">Learn more about your customer's behavior. Get into a full customized Reporting tool allowing you to have a smart understanding of your customer behave and all your promotional activities.</p>
+              </div><!-- /.service-content -->
+              <div class="service-item__overlay bg-overlay bg-overlay-primary">
+                <div class="bg-img"><img src="assets/images/services/2.jpg" alt="background"></div>
+              </div><!-- /.service-item__overlay -->
+            </div><!-- /.service-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- service item #3 -->
+          <div class="col-sm-12 col-md-6 col-lg-4">
+            <div class="service-item">
+              <div class="service-item__content">
+                <div class="service-item__icon">
+                  <i class="icon-hosting"></i>
+                </div><!-- /.service-item__icon -->
+                <h4 class="service-item__title">Real-Time Data</h4>
+                <p class="service-item__desc">Market Analysis for Your Business Growth. Track the performance of your promotions through various metrics like leaderboards or campaign performance and track customer purchases.</p>
+              </div><!-- /.service-content -->
+              <div class="service-item__overlay bg-overlay bg-overlay-primary">
+                <div class="bg-img"><img src="assets/images/services/3.jpg" alt="background"></div>
+              </div><!-- /.service-item__overlay -->
+            </div><!-- /.service-item -->
+          </div><!-- /.col-lg-4 -->
+          <!-- service item #4 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Services Layout 2 -->
 
 
 
-</p>
-                            
-                        </div> <!-- header hero content -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- container -->
-            <div class="header-hero-image d-flex align-items-center wow fadeInRightBig" data-wow-duration="1s" data-wow-delay="1.1s">
-                <div class="image">
-                    <img src="assets/images/hero-image.png" alt="Hero Image">
-                </div>
-            </div> <!-- header hero image -->
-        </div> <!-- header hero -->
-    </header>
-    
-    <!--====== HEADER PART ENDS ======-->
-    
-    <!--====== ABOUT PART START ======-->
-    
-    <section id="about" class="about-area pt-115">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="about-title text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <h6 class="welcome">WELCOME</h6>
-                        <h3 class="title">Traceberry is an cloud based Promotion Engine that offers a user interface for creating and managing promotions that run on your app, e-commerce, and any platform. </h3>
-                    </div>
-                </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="about-image mt-60 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <img src="assets/images/about.png" alt="about">
-                    </div> <!-- about image -->
-                </div>
-            </div> <!-- row -->
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="about-content pt-45">
-                        <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">Our mission is to enable all retailers to digitize their customer experience. The platform’s core value is to level the playing field with the emerging e-commerce disruption currently happening by empowering all stakeholders in the retail ecosystem with a digitized, value-based platform. We are focused on giving our clients a cutting edge platform that brings customers and retailers together and giving both value and benefits. In addition, providing a unique shopping experience.</p>
-                        
-                        <div class="about-counter pt-60">
-                            <div class="row">
-                                
-                                
-                                
-                            </div> <!-- row -->
-                        </div> <!-- about counter -->
-                    </div> <!-- about content -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    
-    <!--====== ABOUT PART ENDS ======-->
-    
-    <!--====== OUR SERVICE PART START ======-->
-    
-    <section id="services" class="our-services-area pt-115">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="about-title text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <h6 class="welcome">TRACEBERRY FEATURES</h6>
-                        <h3 class="title">Traceberry SaaS platform comes with powerfull features to fit all your business need from running a campagins and promotions, and analyze your user's activities in real time.</h3>
-                    </div>
-                </div>
-            </div> <!-- row -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="our-services-tab pt-30">
-                        <ul class="nav justify-content-center wow fadeIn" data-wow-duration="1s" data-wow-delay="0.5s" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="active" id="business-tab" data-toggle="tab" href="#business" role="tab" aria-controls="business" aria-selected="true">
-                                    <i class="lni-location"></i> <span>GEO PROMOTIONS</span>
-                                </a>
-                            </li>
-                            <li class="nav-item">
-                                <a id="digital-tab" data-toggle="tab" href="#digital" role="tab" aria-controls="digital" aria-selected="false">
-                                    <i class="lni-analytics"></i> <span>SMART ANALYTICS</span>
-                                </a>
-                            </li>
 
-                            <li class="nav-item">
-                                <a id="market-tab" data-toggle="tab" href="#market" role="tab" aria-controls="market" aria-selected="false">
-                                    <i class="lni-data"></i> <span>REAL-TIME DATA</span>
-                                </a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="business" role="tabpanel" aria-labelledby="business-tab">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="our-services-image mt-50">
-                                            <img src="assets/images/our-service-1.jpg" alt="service">
-                                        </div> <!-- our services image -->
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="our-services-content mt-45">
-                                            <h3 class="services-title">Reach out to your customer in the righ time, right location</h3>
-                                            <p class="text">Target user based on location and reach your customer anywhere there are. you can create a geofencing for your promotions or keep it open to everyone. </p>
-                                            
-                                            
-                                        </div> <!-- our services content -->
-                                    </div>
-                                </div> <!-- row -->
-                            </div>
-                            
-                            <div class="tab-pane fade" id="digital" role="tabpanel" aria-labelledby="digital-tab">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="our-services-image mt-50">
-                                            <img src="assets/images/our-service-1.jpg" alt="service">
-                                        </div> <!-- our services image -->
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="our-services-content mt-45">
-                                            <h3 class="services-title">Learn more about your customer's behavior</h3>
-                                            <p class="text">Get into a full customized Reporting tool allowing you to have a smart understanding of your customer behave and all your promotional activities through our reporting tool. </p>
-                                            
-                                            
-                                        </div> <!-- our services content -->
-                                    </div>
-                                </div> <!-- row -->
-                            </div>
-                            
-                            <div class="tab-pane fade" id="market" role="tabpanel" aria-labelledby="market-tab">
-                                <div class="row">
-                                    <div class="col-lg-6">
-                                        <div class="our-services-image mt-50">
-                                            <img src="assets/images/our-service-1.jpg" alt="service">
-                                        </div> <!-- our services image -->
-                                    </div>
-                                    <div class="col-lg-6">
-                                        <div class="our-services-content mt-45">
-                                            <h3 class="services-title">Market Analysis  <span>for Your Business Growth.</span></h3>
-                                            <p class="text">Track the performance of your promotions through various metrics like leaderboards or campaign performance and track customer purchases, personal attributes, and their activity on your website and App.</p>
-                                            
-                                            
-                                        </div> <!-- our services content -->
-                                    </div>
-                                </div> <!-- row -->
-                            </div>
-                        </div> <!-- tab content -->
-                    </div> <!-- our services tab -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    
-    <!--====== OUR SERVICE PART ENDS ======-->
-    
-    <!--====== SERVICE PART START ======-->
-    
-    <section id="service" class="service-area pt-105">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-6 col-md-8">
-                    <div class="section-title wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <h6 class="sub-title">Why Us</h6>
-                        <h4 class="title">Easy Process With Traceberry API</h4>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="service-wrapper mt-60 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                <div class="row no-gutters justify-content-center">
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-service d-flex">
-                            <div class="service-icon">
-                                <img src="assets/images/service-1.png" alt="Icon">
-                            </div>
-                            <div class="service-content media-body">
-                                <h4 class="service-title">POWERFUL API</h4>
-                                <p class="text">A headless design, with APIs easy-to-integrate to mobile applications.</p>
-                            </div>
-                            <div class="shape shape-1">
-                                <img src="assets/images/shape/shape-1.svg" alt="shape">
-                            </div>
-                            <div class="shape shape-2">
-                                <img src="assets/images/shape/shape-2.svg" alt="shape">
-                            </div>
-                        </div> <!-- single service -->
-                    </div>
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-service service-border d-flex">
-                            <div class="service-icon">
-                                <img src="assets/images/service-2.png" alt="Icon">
-                            </div>
-                            <div class="service-content media-body">
-                                <h4 class="service-title">FULL CONTROL</h4>
-                                <p class="text">A scalable tool that will give you full control over your promotion activities.</p>
-                            </div>
-                            <div class="shape shape-3">
-                                <img src="assets/images/shape/shape-3.svg" alt="shape">
-                            </div>
-                        </div> <!-- single service -->
-                    </div>
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-service d-flex">
-                            <div class="service-icon">
-                                <img src="assets/images/service-3.png" alt="Icon">
-                            </div>
-                            <div class="service-content media-body">
-                                <h4 class="service-title">TARGET CUSTOMERS</h4>
-                                <p class="text">Plan easily for ultra-targeted promotions campaigns.</p>
-                            </div>
-                            <div class="shape shape-4">
-                                <img src="assets/images/shape/shape-4.svg" alt="shape">
-                            </div>
-                            <div class="shape shape-5">
-                                <img src="assets/images/shape/shape-5.svg" alt="shape">
-                            </div>
-                        </div> <!-- single service -->
-                    </div>
-                </div> <!-- row -->
-                 <!-- row -->
-            </div> <!-- service wrapper -->
-        </div> <!-- container -->
-    </section>
-    
-    <!--====== SERVICE PART ENDS ======-->
-    <!--====== PRICING PART START ======-->
-    
-    <section data-scroll-index="0" id="pricing" class="pricing-area pt-115">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-5 col-md-8 col-sm-9">
-                    <div class="section-title text-center pb-20 wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.2s">
-                        <h6 class="sub-title">Pricing Plans</h6>
-                        <h4 class="title">Providing Best Pricing <span>For Your Business.</span></h4>
-                        <P>Start your 30 Day Free Trial Today. No Charge, No Commitment.</P>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="row no-gutters justify-content-center">
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-pricing text-center pricing-color-1 mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <div class="pricing-price">
-                            <span class="price"><b>249</b>$.<span class="symbol">/Month</span></span>
-                        </div>
-                        <div class="pricing-title mt-20">
-                            <h4 class="title">Professional</h4>
-                        </div>
-                        <div class="pricing-list pt-20">
-                            <ul>
-                                <li>Traceberry API</li>
-                                <li>Social Media API</li>
-                                <li>100 Promotion</li>
-                                <li>2000 Redemptions</li>
-                                <li>Daily Report</li>
-                                <li>Email Support</li>
-                            </ul>
-                        </div>
-                        
-                        
-                    </div> <!-- single pricing -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-pricing text-center pricing-active pricing-color-2 mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.6s">
-                        <div class="pricing-price">
-                             <span class="price"><b>599</b>$.<span class="symbol">/Month</span></span>
-                        </div>
-                        <div class="pricing-title mt-20">
-                            <span class="btn">Most Value</span>
-                            <h4 class="title">Growth</h4>
-                        </div>
-                        <div class="pricing-list pt-20">
-                            <ul>
-                                <li>Traceberry API</li>
-                                <li>Social Media API</li>
-                                <li>500 Promotion</li>
-                                <li>10K Redemptions</li>
-                                <li>Real-Time Report</li>
-                                <li>Email / Phone Support</li>
-                            </ul>
-                        </div>
-                        
-                       
-                    </div> <!-- single pricing -->
-                </div>
-                <div class="col-lg-4 col-md-7 col-sm-9">
-                    <div class="single-pricing text-center pricing-color-3 mt-30 wow fadeIn" data-wow-duration="1s" data-wow-delay="0.9s">
-                        <div class="pricing-price">
-                             <span class="price"><b>4,999</b>$.<span class="symbol">/Month</span></span>
-                        </div>
-                        <div class="pricing-title mt-20">
-                            <h4 class="title">Enterprise</h4>
-                        </div>
-                        <div class="pricing-list pt-20">
-                            <ul>
-                                <li>Traceberry API</li>
-                                <li>Social Media API</li>
-                                <li>Unlimited Promotion</li>
-                                <li>Unlimited Redemptions</li>
-                                <li>Real-Time Report</li>
-                                <li>Priority Support</li>
-                            </ul>
-                        </div>
-                        
-                    </div> <!-- single pricing -->
-                </div>
-            </div> <!-- row --><br>
-            <div class="service-wrapper mt-60 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.6s">
-                <div class="row no-gutters justify-content-center">
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-service d-flex">
-                            
-                            <div class="service-content media-body">
-                                <h4 class="service-title">Social Media API</h4>
-                               <p class="text">Don't have an App or a website. Publish promotions to Facebook and Instagram direclty through Traceberry Platform.</p>
-<br>
-                                <div class="pricing-price">
-                             <span class="price"><b>49</b>$.<span class="symbol">/Month</span></span>
-                        </div>
-                                
-                            </div>
-                            
-                            
-                        </div> <!-- single service -->
-                    </div>
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-service service-border d-flex">
-                            
-                            <div class="service-content media-body">
-                                <h4 class="service-title">Pay As You Go</h4>
-                               <p class="text">Purchase Traceberry API with pay-as-you-go pricing. Pay only for what you use each month, with no upfront commitment.</p>
-<br>
-                                <div class="pricing-price">
-                             <span class="price"><b>0.80</b>$.<span class="symbol">/ Transaction / Month</span></span>
-                        </div>
-                                
-                            </div>
-                            
-                        </div> <!-- single service -->
-                    </div>
-                    <div class="col-lg-4 col-md-7">
-                        <div class="single-service d-flex">
-                            
-                            <div class="service-content media-body">
-                                <h4 class="service-title">Marketing Agencies</h4>
-                               <p class="text">At Traceberry, we help marketing agencies to publish customized promotional activities for their customers.</p>
-<br>
-                                <div class="pricing-price">
-                             <span class="price"><span class="symbol">Contact us for pricing</span></span>
-                        </div>
-                                
-                            </div>
-                        </div> <!-- single service -->
-                    </div>
-                </div> <!-- row -->
-                 <!-- row -->
+    <!-- ======================
+    Features Layout 2
+    ========================= -->
+    <section class="features-layout2 pt-130 pb-0 mb-130">
+      <div class="bg-img"><img src="assets/images/backgrounds/7.jpg" alt="background"></div>
+      <div class="container">
+        <div class="row heading heading-layout2 mb-50">
+          <div class="col-sm-12 col-md-12 col-lg-6">
+
+            <p class="color-gray mb-40">Traceberry Promotion Engine API is a fully-featured Stand Alone Promotions Engine offering everything you need to manage your promotions.<br>The Promotion Engine has features, options, and tools that make it
+              the most versatile engine on the market by allowing you to centralize management of your promotions and enable promotion checking across the estate including ePOS, Website and Call Centre. The powerful customization options & features
+              give you the flexibility to create the promotions and have full analytics over the promotional activities 
+
+          </div><!-- /.col-lg-6 -->
+          <div class="col-sm-12 col-md-12 col-lg-6">
+            <h3 class="heading__title color-white">Promo Engine API</h3>
+            <div class="footer-widget__content">
+              <a href="api.html" class="btn btn__primary btn__primary-style2 btn__link">
+                <span>Learn More</span><i class="icon-arrow-right icon-outlined"></i>
+              </a>
             </div>
-        </div> <!-- container -->
-    </section>
-    
-    <!--====== PRICING PART ENDS ======-->
-    
- 
-    
-    <!--====== BRAND PART START ======-->
-    
-    <section id="api" class="about-area pt-115">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-9">
-                    <div class="about-title text-center wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <h6 class="welcome">Tracebery API Reference</h6>
-                        
-                    </div>
-                </div>
-            </div> <!-- row -->
-            
-            <div class="row justify-content-center">
-                <div class="col-lg-10">
-                    <div class="about-content pt-45">
-                        <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
-                        Traceberry API is organized around REST. Our API has predictable resource-oriented URLs, accepts form-encoded request bodies, returns JSON-encoded responses, and uses standard HTTP response codes, authentication, and verbs.<br><br>
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
 
-You can use the Traceberry API in test mode, which does not affect your live data or interact with the banking networks. The API key you use to authenticate the request determines whether the request is live mode or test mode.<br><br>
+      </div><!-- /.container -->
+    </section><!-- /.Features Layout 2 -->
 
-Traceberry API differs for every account as we release new versions and tailor functionality based on account level and package you subscribe to.<br><br>
-                            
-                            Traceberry API uses API keys to authenticate requests. You can view and manage your API keys in the Traceberry Portal.<br><br>
-
-Your API keys carry many privileges, so be sure to keep them secure! Do not share your secret API keys in publicly accessible areas such as GitHub, client-side code, and so forth.<br><br>
-
-Authentication to the API is performed via HTTP Basic Auth. Provide your API key as the basic auth username value. You do not need to provide a password.
-                        </p>
-                    </div> <!-- about content -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-    
-    <!--====== BRAND PART ENDS ======-->
-    <!--====== CONTACT PART START ======-->
-
-    <section id="contact" class="contact-area pt-120 pb-120">
-        <div class="container">
-            <div class="row justify-content-center">
-                <div class="col-lg-4">
-                    <div class="section-title text-center pb-20 wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.3s">
-                        <h6 class="sub-title">Our Contact</h6>
-                        <h4 class="title">Get In <span>Touch.</span></h4>
-                    </div> <!-- section title -->
-                </div>
-            </div> <!-- row -->
-            <div class="contact-info pt-30">
-                <div class="row">
-                    
-                </div> <!-- row -->
-            </div> <!-- contact info -->
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="contact-wrapper-form pt-115  wow fadeInUpBig" data-wow-duration="1s" data-wow-delay="0.5s">
-                        <h4 class="contact-title pb-10"><i class="lni-envelope"></i> Leave <span>A Message.</span></h4>
-                        
-                        <form id="contact-form" action="assets/contact.php" method="post">
-                            <div class="row">
-                                <div class="col-md-6">
-                                    <div class="contact-form mt-45">
-                                        <label>Enter Your Name</label>
-                                        <input type="text" name="name" placeholder="Full Name">
-                                    </div> <!-- contact-form -->
-                                </div>
-                                <div class="col-md-6">
-                                    <div class="contact-form mt-45">
-                                        <label>Enter Your Email</label>
-                                        <input type="email" name="email" placeholder="Email">
-                                    </div> <!-- contact-form -->
-                                </div>
-                                <div class="col-md-12">
-                                    <div class="contact-form mt-45">
-                                        <label>Your Message</label>
-                                        <textarea name="message" placeholder="Enter your message..."></textarea>
-                                    </div> <!-- contact-form -->
-                                </div>
-                                <p class="form-message"></p>
-                                <div class="col-md-12">
-                                    <div class="contact-form mt-45">
-                                        <button type="submit" class="main-btn">Send Now</button>
-                                    </div> <!-- contact-form -->
-                                </div>
-                            </div> <!-- row -->
-                        </form>
-                    </div> <!-- contact wrapper form -->
-                </div>
-            </div> <!-- row -->
-        </div> <!-- container -->
-    </section>
-
-    <!--====== CONTACT PART ENDS ======-->
-    
-    <!--====== FOOTER PART START ======-->
-    
-        <div class="container">
-            <div class="footer-widget pt-30 pb-70">
-                <div class="row">
-                    <div class="col-lg-3 col-sm-6 order-sm-1 order-lg-1">
-                        <div class="footer-about pt-40">
-                            <a href="#">
-                                <img src="assets/images/logo.png" alt="Logo">
-                            </a>
-                             <p class="text">Promotions Engine for every Platform.</p>
-                        </div> <!-- footer about -->
-                    </div>
-                    <div class="col-lg-3 col-sm-6 order-sm-3 order-lg-2">
-                        <div class="footer-link pt-40">
-                            <div class="footer-title">
-                                <h5 class="title">Services</h5>
-                            </div>
-                            <ul>
-                               <li><a href="comingsoon.html" target="_blank">Build your business with us</a></li>
-                                <li><a href="comingsoon.html" target="_blank">Become a Partner</a></li>
-                                <li><a href="comingsoon.html" target="_blank">Affiliate Program</a></li>
-                            </ul>
-                        </div> <!-- footer link -->
-                    </div>
-                    <div class="col-lg-3 col-sm-6 order-sm-4 order-lg-3">
-                        <div class="footer-link pt-40">
-                            <div class="footer-title">
-                                <h5 class="title">Legal</h5>
-                            </div>
-                            <ul>
-                                <li><a href="terms.html" target="_blank">Terms & Conditions</a></li>
-                                <li><a href="privacy.html" target="_blank">Privacy Policy</a></li>
-                            </ul>
-                        </div> <!-- footer link -->
-                    </div>
-                    <div class="col-lg-3 col-sm-6 order-sm-2 order-lg-4">
-                        <div class="footer-contact pt-40">
-                            <div class="footer-title">
-                                <h5 class="title">Contact</h5>
-                            </div>
-                            <div class="contact pt-10">
-                                <p class="text">Jumeirah Lakes Towers <br>
-                                    Dubai, United Arab Emirates.</p>
-                                <p class="text">info@traceberry.com</p>
-                                
-
-                                <ul class="social mt-40">
-                                    <li><a href="https://www.linkedin.com/company/traceberry/" target="_blank"><i class="lni-linkedin"></i></a></li>
-                                </ul>
-                            </div> <!-- contact -->
-                        </div> <!-- footer contact -->
-                    </div>
-                </div> <!-- row -->
-            </div> <!-- footer widget -->
-            <div class="footer-copyright text-center">
-                <p class="text">© 2021 Crafted by <a href="https://uideck.com" rel="nofollow">TRACEBERRY</a> All Rights Reserved.<br>Traceberry Platform Made with &hearts; in UAE</p>
-
+    <!-- =========================
+      Awards
+      =========================== -->
+    <section class="awards pt-20 pb-100">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-5">
+            <div class="heading-layout2">
+              <h3 class="heading__title mb-50">Promo Engine Link</h3>
             </div>
-        </div> <!-- container -->
-    </footer>
-    
-    <!--====== FOOTER PART ENDS ======-->
-    
-    <!--====== BACK TOP TOP PART START ======-->
+          </div><!-- /.col-lg-6 -->
+        </div><!-- /.row -->
+        <div class="row awards-wrapper">
 
-    <a href="#" class="back-to-top"><i class="lni-chevron-up"></i></a>
+          <div class="row justify-content-center">
+            <div class="col-lg-10">
+              <div class="about-content pt-45">
+                <p class="text wow fadeInUp" data-wow-duration="1s" data-wow-delay="0.4s">
+                  Every post you make on social media is an opportunity for lead conversion. A post that elevates your effectiveness and capabilities with an innovative thought will attract the audience to go through the portfolio and can show or
+                  express their interest in doing business with you. When social media is operated correctly, it can generate real leads for your business. Thus, social media can be used as a lead generating tool and that too in a cost-effective way.
+                  <br>
+                  Traceberry provides your business with a deep-linking tool with analytics over your promotional activities on your social media channels.
+                </p>
+              </div> <!-- about content -->
+              <div class="footer-widget__content">
+                <a href="link.html" class="btn btn__primary btn__link mx-3">
+                  <span>Learn More</span><i class="icon-arrow-right icon-outlined"></i>
+                </a>
+              </div>
+            </div>
+          </div> <!-- row -->
 
-    <!--====== BACK TOP TOP PART ENDS ======-->  
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Awards -->
+    <!-- =========================
+       Banner layout 1
+      =========================== -->
+    <section id="request" class="banner-layout1 pt-90 pb-90 bg-overlay bg-overlay-primary">
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div class="col-inner">
+              <div class="heading-layout2 heading-light mb-40">
+                <h3 class="heading__title mb-30">Talk to Us!</h3>
+                <p class="heading__desc">We are here to help your business growth and let reach your exciting and new cutomers through powerfull promotion engine that increase your revenue and give you the control over your promotional activities.
+                </p>
+                <p class="heading__desc">Drop us a line and our sales team will get back to you.
+                </p>
 
 
+              </div><!-- /.heading -->
+            </div>
+          </div><!-- /.col-xl-6 -->
+          <div class="col-sm-12 col-md-12 col-lg-12 col-xl-6">
+            <div class="contact-panel">
+              <form class="contact-panel__form" method="post" id="requestForm">
+                <div class="row">
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <h4 class="contact-panel__title">Request A Demo</h4>
+                  </div> <!-- /.col-lg-12 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <label for="contact-name">Name (required)</label>
+                      <input type="text" class="form-control" placeholder="Name" id="name" name="contact-name" required>
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <label for="contact-email">Email (required)</label>
+                      <input type="email" class="form-control" placeholder="Email" id="email" name="contact-email" required>
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <label for="contact-Phone">Inquiry (required)</label>
+                      <select class="form-control" id="engine">
+                        <option value="Promo Engine API">Promo Engine API</option>
+                        <option value="Promo Engine Link">Promo Engine Link</option>
+                      </select>
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-6 col-md-6 col-lg-6">
+                    <div class="form-group">
+                      <label for="contact-Phone">Phone (Optional)</label>
+                      <input type="text" class="form-control" placeholder="Phone" id="phone" name="contact-phone">
+                    </div>
+                  </div><!-- /.col-lg-6 -->
+                  <div class="col-sm-12 col-md-12 col-lg-12">
+                    <div class="form-group">
+                      <label for="contact-message">Additional Details (optional)</label>
+                      <textarea class="form-control" placeholder="Describe your inquiry!" id="message" name="contact-message"></textarea>
+                    </div>
+                    <!-- <div class="custom-control custom-checkbox d-flex align-items-center mb-20">
+                      <input type="checkbox" class="custom-control-input" id="terms">
+                      <label class="custom-control-label" for="terms">I accept the privacy and terms.</label>
+                    </div> -->
+                    <h5 name="response"></h5>
+                    <button type="submit" class="btn btn__secondary btn__xl btn__block" name="requestButton">Submit Request </button>
+                    <div class="contact-result"></div>
+                  </div><!-- /.col-lg-12 -->
+                </div><!-- /.row -->
+              </form>
+            </div>
+          </div><!-- /.col-xl-6 -->
+        </div><!-- /.row -->
+      </div><!-- /.container -->
+    </section><!-- /.Banner layout 1 -->
+
+    <!-- ========================
+      Footer
+    ========================== -->
+    <footer class="footer bg-heading">
+      <div class="bg-img"><img src="assets/images/backgrounds/2.png" alt="backgrounds"></div>
+      <div class="footer-contact pt-50 pb-50">
+        <div class="container">
+          <div class="row">
 
 
-    <!--====== Jquery js ======-->
-    <script src="assets/js/vendor/jquery-1.12.4.min.js"></script>
-    <script src="assets/js/vendor/modernizr-3.7.1.min.js"></script>
-    
-    <!--====== Bootstrap js ======-->
-    <script src="assets/js/popper.min.js"></script>
-    <script src="assets/js/bootstrap.min.js"></script>
-    
-    <!--====== Slick js ======-->
-    <script src="assets/js/slick.min.js"></script>
-    
-    <!--====== Isotope js ======-->
-    <script src="assets/js/imagesloaded.pkgd.min.js"></script>
-    <script src="assets/js/isotope.pkgd.min.js"></script>
-    
-    <!--====== Counter Up js ======-->
-    <script src="assets/js/waypoints.min.js"></script>
-    <script src="assets/js/jquery.counterup.min.js"></script>
-    
-    <!--====== Circles js ======-->
-    <script src="assets/js/circles.min.js"></script>
-    
-    <!--====== Appear js ======-->
-    <script src="assets/js/jquery.appear.min.js"></script>
-    
-    <!--====== WOW js ======-->
-    <script src="assets/js/wow.min.js"></script>
-    
-    <!--====== Headroom js ======-->
-    <script src="assets/js/headroom.min.js"></script>
-    
-    <!--====== Jquery Nav js ======-->
-    <script src="assets/js/jquery.nav.js"></script>
-    
-    <!--====== Scroll It js ======-->
-    <script src="assets/js/scrollIt.min.js"></script>
-    
-    <!--====== Magnific Popup js ======-->
-    <script src="assets/js/jquery.magnific-popup.min.js"></script>
-    
-    <!--====== Main js ======-->
-    <script src="assets/js/main.js"></script>
-    
+            <div class="col-sm-12 col-md-8 col-lg-6">
+              <h6 class="footer-widget__title">Newsletter</h6>
+              <p class="color-gray mb-40">Subscribe to our newsletter to keep receiving our updates and news</p>
+              <p class="color-gray mb-40" name="subResponse"></p>
+              <form class="footer-form d-flex mb-0" id="subscribeForm" method="post">
+                <input type="text" class="form-control mr-20" placeholder="Your Email Address" id="emailSubscription" required>
+                <button type="submit" class="btn btn__primary btn__primary-style2" name="subscribeButton">Subscribe</button>
+              </form>
+            </div><!-- /.col-lg-6 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-contact -->
+      <div class="footer-primary">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-4 footer-widget footer-widget-about">
+              <div class="footer-widget__content">
+                <img src="assets/images/logo/logo-light.png" alt="logo" class="mb-30">
+                <p class="color-gray mb-40">Traceberry is a cloud-based Promotion Engine that offers a user interface for creating and managing promotions that run on your app, e-commerce, and any platform.</p>
+
+
+                <li class="d-none d-xl-block">
+                  <a href="https://www.linkedin.com/company/traceberry" target="_blank" class="btn btn__primary btn__primary-style2 btn_ action__btn-contact">Follow us on Linkedin</a>
+                </li>
+
+                <!-- /.social-icons -->
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-xl-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav">
+              <h6 class="footer-widget__title">Company</h6>
+              <div class="footer-widget__content">
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="about-us.html">About Us</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav">
+              <h6 class="footer-widget__title">Solutions</h6>
+              <div class="footer-widget__content">
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="api.html">Promo Engine API</a></li>
+                    <li><a href="link.html">Promo Engine Link</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav">
+              <h6 class="footer-widget__title">Resources</h6>
+              <div class="footer-widget__content">
+                <nav>
+                  <ul class="list-unstyled">
+                    <li><a href="terms.html">Terms of Service</a></li>
+                    <li><a href="privacy.html">Privacy Policy</a></li>
+                    <li><a href="faqs.html">Help & FAQ</a></li>
+                    <li><a href="contact-us.html">Become a Partner</a></li>
+                  </ul>
+                </nav>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+            <div class="col-sm-6 col-md-6 col-lg-2 footer-widget footer-widget-nav">
+              <h6 class="footer-widget__title">Developers</h6>
+              <div class="footer-widget__content">
+                <a href="dev.html" class="btn btn__primary btn__primary-style2 btn__link">
+                  <span>Traceberry API</span><i class="icon-arrow-right icon-outlined"></i>
+                </a>
+              </div><!-- /.footer-widget__content -->
+            </div><!-- /.col-lg-2 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-primary -->
+      <div class="footer-secondary">
+        <div class="container">
+          <div class="row">
+            <div class="col-sm-12 col-md-12 col-lg-12 text-center">
+              <span class="fz-14">&copy; 2021 TRACEBERRY. All Rights Reserved.<br>Made with &hearts; in UAE</span>
+            </div><!-- /.col-lg-12 -->
+          </div><!-- /.row -->
+        </div><!-- /.container -->
+      </div><!-- /.footer-secondary -->
+    </footer><!-- /.Footer -->
+    <button id="scrollTopBtn"><i class="fas fa-long-arrow-alt-up"></i></button>
+  </div><!-- /.wrapper -->
+
+  <script src="assets/js/jquery-3.5.1.min.js"></script>
+  <script src="assets/js/plugins.js"></script>
+  <script src="assets/js/main.js"></script>
+  <script src="assets/js/demo-request.js"></script>
+  <script src="assets/js/subscribe.js"></script>
 </body>
 
 </html>
